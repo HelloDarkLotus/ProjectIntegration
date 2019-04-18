@@ -1,3 +1,4 @@
+import os
 import paramiko
 from git import Repo
 
@@ -21,4 +22,7 @@ class CompileModule(object):
         self.Ssh.close()
 
     def CloneCodeFromGit(self, repoPath, srcPath):
-        Repo.clone_from(repoPath, srcPath)
+        if not os.path.exists(srcPath):
+            Repo.clone_from(repoPath, srcPath)
+        else:
+            Repo.clone(srcPath)
