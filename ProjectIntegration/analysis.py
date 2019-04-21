@@ -1,5 +1,6 @@
 import csv
 
+
 class DataAnalysis(object):
     def __init__(self, csvFile):
         self.file = csvFile

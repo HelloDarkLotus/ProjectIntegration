@@ -2,6 +2,7 @@ import os
 import paramiko
 from git import Repo
 
+
 class CompileModule(object):
     def __init__(self, ip, username, password):
         self.Ssh = ""
